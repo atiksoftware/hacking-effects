@@ -1,11 +1,7 @@
-# hacking-effects
+# Javascript Hacking Effects 
 
-Javascript Hacking Effects
-==========================
-
-![Amiral Router](https://img.shields.io/badge/Author-Amiral Router-blue) [ ![Amiral Router Discord](https://img.shields.io/badge/Discord-Amiral%20Router-7289DA) ](https://discord.gg/r29z6XW "Amiral Router Discord") ![Amiral Router](https://amiralrouter.online/wp-json/ba/v1/requests/187) ![Amiral Router](https://img.shields.io/badge/license-MIT-blueviolet) ![Amiral Router](https://img.shields.io/badge/contributors-1 agent-red) ![Amiral Router](https://img.shields.io/badge/hash-8C350F86-4caf50)
-
-[Home](https://amiralrouter.online/) » Javascript Hacking Effects
+![Amiral Router](https://img.shields.io/badge/Author-Amiral%20Router-blue) [ ![Amiral Router Discord](https://img.shields.io/badge/Discord-Amiral%20Router-7289DA) ](https://discord.gg/r29z6XW "Amiral Router Discord") ![Amiral Router](https://amiralrouter.online/wp-json/ba/v1/requests/187) ![Amiral Router](https://img.shields.io/badge/license-MIT-blueviolet) ![Amiral Router](https://img.shields.io/badge/contributors-1%20agent-red) ![Amiral Router](https://img.shields.io/badge/hash-8C350F86-4caf50)
+ 
 
 ![](https://amiralrouter.online/wp-content/uploads/2021/04/Javascript-Hacking-Effects.jpg)
 
