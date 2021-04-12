@@ -17,7 +17,7 @@ You are free to use it the way you want.
 
 [https://github.com/atiksoftware/hacking-effects](https://github.com/atiksoftware/hacking-effects)
 
-![](https://amiralrouter.online/wp-content/uploads/2021/04/Hacking-Effect-Binary-Numbers.gif)
+![](https://raw.githubusercontent.com/atiksoftware/hacking-effects/main/binary_numbers.gif)
 
 Binary Numbers Effect
 
