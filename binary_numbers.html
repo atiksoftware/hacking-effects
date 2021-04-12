@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Numbers</title>
+</head>
+
+<body>
+
+    <div id="app">
+		<table>
+			<tbody>
+				<tr v-for="(row,row_index) in entities" :key="'row'+row_index">
+					<td  v-for="(col,col_index) in row" 
+						:key="'row'+row_index+'col'+col_index"
+						:data-align="col.align"
+						:data-visible="col.visible"
+						:data-error="col.error"
+						:data-alert="col.alert"
+						:data-signal="col.signal"
+					>
+						<span>{{col.text}}</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div> 
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+	<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script>
+        /**
+			Hi. I'm Amiral Router.
+			I not code it with Canvas. Its just CSS.
+			Actualy i dont like this method for build apps. 
+			But I think its more easy then node project for editing code.
+		*/
+
+		const MAX_COLUMN_WIDTH = 300;
+		const MAX_COLUMN_HEIGHT = 40;
+		const MAX_BINARY_LENGTH = 10;
+		const randomBinary = () => {
+			return Array(_.random(4, 10)).fill().map(() => _.sample([0,1])).join(''); 
+		}
+		const randomValue = (percent) => {
+			return Math.random() < percent / 100 ? 1 : 0
+		}
+
+        new Vue({
+            el: '#app',
+            data: { 
+				entities : []
+            },
+            created() { 
+                setInterval(() => {
+                    this.changeProperties();
+                }, 300)
+                setInterval(() => {
+					this.changeTexts(); 
+                }, 50)
+
+				this.initEntities();
+				window.addEventListener("resize", this.initEntities);
+            },
+            methods: {
+				getColumnCount(){
+					return Math.ceil(window.innerWidth / MAX_COLUMN_WIDTH)
+				},
+				getRowCount(){
+					return Math.ceil(window.innerHeight / MAX_COLUMN_HEIGHT)
+				},
+				initEntities(){
+					let entities = [] 
+					for(let row_index = 0; row_index < this.getRowCount(); row_index++){
+						let row = []
+						for(let column_index = 0; column_index < this.getColumnCount(); column_index++){
+							row.push({ 
+								text : randomBinary()
+							})
+						}
+						entities.push(row)
+					}
+					this.entities = entities;
+					this.changeProperties();
+				},
+				changeTexts(){
+					for(let i = 0; i < _.random(5,15);i++){
+						this.entities[_.random(0,this.getRowCount() - 1)][_.random(0,this.getColumnCount() - 1)].text = randomBinary()
+					}
+				},
+
+				changeProperties(){
+					this.entities.forEach(row => {
+						row.forEach(col => {
+							col.align = _.sample([0,0,0,0,0,0,1,1,2])
+							col.visible = randomValue(75)
+							col.error = randomValue(20)
+							col.alert = randomValue(10)
+							col.signal = randomValue(50)
+						})
+					})
+				}, 
+            }
+        });
+    </script>
+	<style>
+		body,html{
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #111;
+			color:rgb(10, 198, 231);
+			background-image:url('https://amiralrouter.online/wp-content/uploads/2021/04/hacking_effects_background.jpg');
+			background-size:cover;
+			background-position:center;
+		}
+		#app{
+			position: relative;
+			width: 100%;
+			height: 100%;
+			font-family: consolas;
+			font-weight: 700;
+			font-size:24px;
+		}
+		#app::before{
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 100%;
+			background-image:url('https://amiralrouter.online/wp-content/themes/amiral/images/amiral_router_horizontal.svg');
+			background-size:600px auto;
+			background-position:center;
+			background-repeat:no-repeat;
+			opacity:.2;
+		}
+		table{
+			width: 100%;
+			height: 100%;
+    		table-layout: fixed;
+		}
+		td{
+			padding: 0px 20px;
+		}
+		td span{
+			padding: 2px 8px;
+			border-radius: 3px;
+			transition: opacity .1s, text-shadow .3s ease;
+		}
+		td[data-align="1"]{text-align:center}
+		td[data-align="2"]{text-align:right}
+		td[data-visible="0"] span{display:none}
+		td[data-error="1"] span{color:red;}
+		td[data-alert="1"] span{background-color: rgb(223, 183, 4); color:#000;}
+		td[data-error="1"][data-signal="1"] span{text-shadow: 0 0 15px red;}
+		td[data-alert="1"][data-signal="1"] span{text-shadow: none;} 
+	</style>
+</body>
+
+</html>
