@@ -17,9 +17,11 @@ You are free to use it the way you want.
 
 [https://github.com/atiksoftware/hacking-effects](https://github.com/atiksoftware/hacking-effects)
 
+Binary Numbers Effect
 ![](https://raw.githubusercontent.com/atiksoftware/hacking-effects/main/binary_numbers.gif)
 
-Binary Numbers Effect
+Java Code Stream
+![](https://raw.githubusercontent.com/atiksoftware/hacking-effects/main/java_code_stream.gif)
 
 *   [hacking](https://amiralrouter.online/tag/hacking/)
 *   [effect](https://amiralrouter.online/tag/effect/)
