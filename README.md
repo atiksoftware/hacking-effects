@@ -25,6 +25,15 @@ Binary Numbers Effect
 Java Code Stream  
 ![](https://raw.githubusercontent.com/atiksoftware/hacking-effects/main/java_code_stream.gif)
 
+
+
+
+RouterNet Cyber Attacks Map
+![](https://raw.githubusercontent.com/atiksoftware/hacking-effects/main/routernet_cyber_attacks_map.gif)
+
+
+
+
 *   [hacking](https://amiralrouter.online/tag/hacking/)
 *   [effect](https://amiralrouter.online/tag/effect/)
 *   [javascript](https://amiralrouter.online/tag/javascript/)
