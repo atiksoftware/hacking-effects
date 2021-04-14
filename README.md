@@ -17,6 +17,8 @@ You are free to use it the way you want.
 
 [https://github.com/atiksoftware/hacking-effects](https://github.com/atiksoftware/hacking-effects)
 
+
+
 Binary Numbers Effect  
 ![](https://raw.githubusercontent.com/atiksoftware/hacking-effects/main/binary_numbers.gif)
 
@@ -29,6 +31,7 @@ Java Code Stream
 
 
 RouterNet Cyber Attacks Map
+[https://a.amiralrouter.online/routernet_cyber_attacks_map/](https://a.amiralrouter.online/routernet_cyber_attacks_map/)
 ![](https://raw.githubusercontent.com/atiksoftware/hacking-effects/main/routernet_cyber_attacks_map.gif)
 
 
